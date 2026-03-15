@@ -193,15 +193,10 @@ Concordance = 0.96 (높은 예측력)
 | Variable | HR | 해석 |
 |----------|----|------|
 | total_fails | 0.56 | 실패 누적이 많을수록 이탈 위험 감소 (생존시간이 길어지는 구조 반영) |
-
 | total_destroy | 0.72 | 파괴 경험이 누적된 유저는 더 오래 강화 지속 |
-
 | max_consecutive_fail | 1.33 | 연속 실패 최대값 증가 시 이탈 위험 33% 증가 |
-
 | policy_baseline | 1.70 | Baseline 정책은 Advantage 대비 이탈 위험 70% 높음 |
-
 | union_segment_low_union | 1.44 | high_union 대비 low_union 이탈 위험 44% 높음 |
-
 | union_segment_mid_union | 1.24 | high_union 대비 mid_union 이탈 위험 24% 높음 |
 
 total_fails의 HR < 1은 실패가 누적될수록 생존 시간이 길어진 유저에게만 관측되는 생존 편향 효과를 반영합니다.
