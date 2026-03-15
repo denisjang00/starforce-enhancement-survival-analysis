@@ -126,11 +126,11 @@ Simulation
 
 ### Mean 강화 시도 횟수 (tries_until_dropout)
 
-Union Segment   Baseline    Advantage   차이        t-test p-value
------------------------------------------------------------------
-low_union       26.8715     29.279      +2.41       3.56e-15
-mid_union       31.34       33.893      +2.55       3.94e-13
-high_union      36.2415     39.234      +2.99       1.37e-13
+| Union Segment | Baseline | Advantage | 차이 | t-test p-value |
+|---------------|----------|-----------|------|----------------|
+| low_union | 26.8715 | 29.279 | +2.41 | 3.56e-15 |
+| mid_union | 31.34 | 33.893 | +2.55 | 3.94e-13 |
+| high_union | 36.2415 | 39.234 | +2.99 | 1.37e-13 |
 
 ### Dropout Rate 검정 (z-test 기반)
 
