@@ -15,6 +15,29 @@
 
 ----------------------------------------------------------------
 
+## Dashboard
+
+본 프로젝트의 분석 결과는 Tableau 대시보드를 통해 시각적으로 확인할 수 있습니다.
+
+**Tableau Public Dashboard**  
+https://public.tableau.com/views/starforce_enhancement_survival_analysis/dashboard
+
+### Dashboard Preview
+
+![Dashboard Preview](images/dashboard_preview.png)
+
+대시보드는 다음 내용을 중심으로 구성되어 있습니다.
+
+- Enhancement Policy별 Player Survival Curve
+- Cox Hazard Ratio 기반 이탈 위험 요인 분석
+- Union Segment별 생존 시간 증가
+- 정책 적용 시 Goal(22성) 달성 확률 변화
+
+정책 적용 시 생존 곡선이 전체적으로 우측 이동하며  
+이탈 Hazard가 구조적으로 감소하는 패턴을 확인할 수 있습니다.
+
+----------------------------------------------------------------
+
 ## 프로젝트 배경
 
 강화 시스템에서 유저 이탈은 단순히 낮은 성공 확률 때문이 아니라,
@@ -254,11 +277,11 @@ Hazard Modeling 문제로 재정의했습니다.
 
 실행 결과는 다음과 같습니다.
 
-1. 모든 세그먼트에서 정책 효과 통계적으로 유의
-2. 생존 곡선 전체 우측 이동
-3. Advantage 정책은 Baseline 대비 이탈 Hazard 약 41% 감소
-4. 취약 세그먼트(low_union)에서 목표 달성 확률 크게 개선
-5. 최적화는 성공 확률 중심 정책을 구조적으로 선호
+- Advantage 정책은 Baseline 대비 이탈 Hazard 약 **41% 감소**
+- 생존 곡선 전체가 **우측 이동**
+- **Low union 세그먼트**에서 정책 효과 최대
+- 연속 실패는 가장 강한 이탈 위험 요인 (HR 1.33)
+- 성공 확률 증가 정책이 생존 시간 증가에 가장 큰 영향
 
 이는 강화 밸런스 설계를 기대값 중심이 아닌 
 Hazard 최소화 관점으로 전환해야 함을 의미합니다.
