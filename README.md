@@ -62,15 +62,15 @@ https://public.tableau.com/views/starforce_enhancement_survival_analysis/dashboa
 
 ### 유니온 구간별 임계점 설정
 
-UNION_THRESHOLD = {
-    "low_union": 180,
-    "mid_union": 240,
-    "high_union": 320
+UNION_THRESHOLD = {  
+    "low_union": 180,  
+    "mid_union": 240,  
+    "high_union": 320  
 }
 
-threshold = np.random.normal(
-    UNION_THRESHOLD[union_segment],
-    20
+threshold = np.random.normal(  
+    UNION_THRESHOLD[union_segment],  
+    20  
 )
 
 유니온 레벨이 높을수록 더 높은 강화 스트레스를 견디도록
@@ -79,16 +79,16 @@ threshold = np.random.normal(
 
 ### 스트레스 누적 공식
 
-stress += (
-    1.2 * fails +
-    3 * destroy +
-    0.4 * (consecutive_fail ** 2)
+stress += (  
+    1.2 * fails +  
+    3 * destroy +  
+    0.4 * (consecutive_fail ** 2)  
 )
 
 스트레스는 다음과 같은 요소로 구성됩니다.
 
-- 실패       -> 선형 증가
-- 파괴       -> 고가중치
+- 실패       -> 선형 증가  
+- 파괴       -> 고가중치  
 - 연속 실패   -> 제곱 패널티
 
 ----------------------------------------------------------------
