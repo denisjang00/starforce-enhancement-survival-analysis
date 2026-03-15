@@ -63,14 +63,14 @@ https://public.tableau.com/views/starforce_enhancement_survival_analysis/dashboa
 ### 유니온 구간별 임계점 설정
 
 UNION_THRESHOLD = {  
-    "low_union": 180,  
-    "mid_union": 240,  
-    "high_union": 320  
+&nbsp;&nbsp;&nbsp;&nbsp;"low_union": 180,  
+&nbsp;&nbsp;&nbsp;&nbsp;"mid_union": 240,  
+&nbsp;&nbsp;&nbsp;&nbsp;"high_union": 320  
 }
 
 threshold = np.random.normal(  
-    UNION_THRESHOLD[union_segment],  
-    20  
+&nbsp;&nbsp;&nbsp;&nbsp;UNION_THRESHOLD[union_segment],  
+&nbsp;&nbsp;&nbsp;&nbsp;20  
 )
 
 유니온 레벨이 높을수록 더 높은 강화 스트레스를 견디도록
@@ -80,9 +80,9 @@ threshold = np.random.normal(
 ### 스트레스 누적 공식
 
 stress += (  
-    1.2 * fails +  
-    3 * destroy +  
-    0.4 * (consecutive_fail ** 2)  
+&nbsp;&nbsp;&nbsp;&nbsp;1.2 * fails +  
+&nbsp;&nbsp;&nbsp;&nbsp;3 * destroy +  
+&nbsp;&nbsp;&nbsp;&nbsp;0.4 * (consecutive_fail ** 2)  
 )
 
 스트레스는 다음과 같은 요소로 구성됩니다.
@@ -176,8 +176,8 @@ Simulation
 ### 모델
 
 hazard ~ total_fails + total_destroy +  
-         max_consecutive_fail +  
-         policy + union_segment  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_consecutive_fail +  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;policy + union_segment  
 
 총 12,000 observations  
 Concordance = 0.96 (높은 예측력)  
@@ -293,6 +293,9 @@ starforce_hazard_retention_optimization/
 │ ├── simulator.py  
 │ └── stress_model.py  
 │  
+├── dashboard/  
+│ └── starforce_enhancement_survival_analysis.twb  
+|  
 ├── evaluation/  
 │ ├── cox_regression.py  
 │ ├── statistical_test.py  
@@ -301,20 +304,27 @@ starforce_hazard_retention_optimization/
 ├── experiment/  
 │ └── ab_test.py  
 │  
+├── images/  
+│ └── dashboard_preview.png  
+|  
 ├── optimization/  
 │ └── bayesian_optimizer.py  
+│  
+├── scripts/  
+│ └── export_dashboard_data.py  
 │  
 ├── utils/  
 │ └── export_to_csv.py  
 │  
 ├── output/  
 │  
-├── scripts/  
-│ └── export_dashboard_data.py  
+├── .gitignore  
 │  
-├── dashboard_data/  
+├── README.md  
 │  
-└── main.py  
+├── main.py  
+│  
+└── requirements.txt  
 
 ----------------------------------------------------------------
 
@@ -347,7 +357,7 @@ python scripts/export_dashboard_data.py
 Simulation  
 -> Statistical Test  
 -> Survival Analysis  
--> Cox Regression
+-> Cox Regression  
 -> Bayesian Optimization  
 
 으로 이어지는 **일관된 리스크 모델링 구조**를 구축했습니다.
