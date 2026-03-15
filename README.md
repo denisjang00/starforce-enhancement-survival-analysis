@@ -154,11 +154,11 @@ Simulation
 
 임계점 도달까지의 중앙 강화 시도 횟수
 
-Union Segment      Baseline        Advantage       증가폭
----------------------------------------------------------
-low_union           26              29              +3
-mid_union           30              34              +4
-high_union          35              40              +5
+| Union Segment | Baseline | Advantage | 증가폭 |
+|---------------|----------|-----------|--------|
+| low_union | 26 | 29 | +3 |
+| mid_union | 30 | 34 | +4 |
+| high_union | 35 | 40 | +5 |
 
 ### 해석
 
